@@ -1,9 +1,10 @@
 #!/bin/bash
 
-DOCKER=podman
+DOCKER=docker
 
 $DOCKER run -d \
     --name db2_container \
+    --network dbnet \
     --privileged \
     -p 50000:50000 \
     -v "./database:/database" \

@@ -4,7 +4,7 @@ IMAGE_NAME ?= odbcdb2
 IMAGE_TAG := $(DB2_DRIVER_VERSION)-$(ODBC_VERSION)
 FULL_IMAGE_NAME := $(IMAGE_NAME):$(IMAGE_TAG)
 
-DOCKER := podman
+DOCKER := docker
 
 .PHONY: build
 build: clidriver
